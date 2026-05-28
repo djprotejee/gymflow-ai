@@ -1,0 +1,14 @@
+{
+  "real_rows": 16597,
+  "synthetic_rows": 210816,
+  "extended_rows": 227413,
+  "gyms": 16,
+  "real_min_timestamp": "2026-04-15 16:00:14",
+  "real_max_timestamp": "2026-05-26 11:06:27",
+  "synthetic_min_timestamp": "2026-05-26 11:26:27",
+  "synthetic_max_timestamp": "2026-11-25 11:06:27",
+  "synthetic_days": 183,
+  "interval_minutes": 20,
+  "random_seed": 42,
+  "method": "Gym/hour/weekday profile bootstrap with residual noise, weekend, holiday, and seasonal multipliers."
+}

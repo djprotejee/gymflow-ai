@@ -1,0 +1,152 @@
+erDiagram
+    direction TB
+    USER_ACCOUNTS {
+        string user_id PK
+        string email
+        string display_name
+        string role
+    }
+
+    USER_PREFERENCES {
+        string user_id PK, FK
+        int preferred_min_hour
+        int preferred_max_hour
+        float max_crowd_people
+        int weekly_goal_sessions
+        string preferred_gym_id
+        string preferred_rep_mode
+    }
+
+    USER_SESSIONS {
+        int id PK
+        string user_id FK
+        string token_hash
+        string role
+        string created_at
+        string expires_at
+        string revoked_at
+    }
+
+    VISITS {
+        int id PK
+        string user_id FK
+        string gym_id
+        string checked_in_at
+        float active_people_at_checkin
+    }
+
+    WORKOUT_SETS {
+        int id PK
+        string user_id FK
+        string exercise
+        float weight_kg
+        int reps
+        int set_index
+        string performed_at
+    }
+
+    WORKOUT_TEMPLATES {
+        int id PK
+        string user_id FK
+        string name
+        string focus
+        string exercises_json
+        int estimated_minutes
+    }
+
+    SCHEDULED_WORKOUTS {
+        int id PK
+        string user_id FK
+        string gym_id
+        int template_id FK
+        string title
+        string scheduled_at
+        float expected_people
+        string status
+    }
+
+    ACHIEVEMENTS {
+        int id PK
+        string user_id FK
+        string code
+        string title
+        float progress
+        float target
+    }
+
+    RECOMMENDATION_EVENTS {
+        int id PK
+        string user_id FK
+        string recommendation_type
+        string context_key
+        string status
+        float score
+        float expected_people
+    }
+
+    CHAT_SESSIONS {
+        string id PK
+        string user_id FK
+        string title
+        int pinned
+    }
+
+    CHAT_MESSAGES {
+        int id PK
+        string session_id FK
+        string user_id FK
+        string role
+        string text
+        string citations_json
+    }
+
+    CHAT_TOOL_ACTIONS {
+        int id PK
+        string session_id FK
+        string user_id FK
+        string action_type
+        string status
+        string payload_json
+    }
+
+    EXERCISE_LIBRARY {
+        string slug PK
+        string name
+        string category
+        string muscle_group
+        string difficulty
+        string source_url
+    }
+
+    EXERCISE_MEDIA_GALLERY {
+        int id PK
+        string exercise_slug FK
+        string media_type
+        string media_url
+        string source_license
+    }
+
+    PROMOTIONS {
+        int id PK
+        string gym_id
+        string title
+        string starts_at
+        int discount_percent
+        string status
+    }
+
+    USER_ACCOUNTS ||--|| USER_PREFERENCES : has
+    USER_ACCOUNTS ||--o{ USER_SESSIONS : opens
+    USER_ACCOUNTS ||--o{ VISITS : logs
+    USER_ACCOUNTS ||--o{ WORKOUT_SETS : records
+    USER_ACCOUNTS ||--o{ WORKOUT_TEMPLATES : owns
+    USER_ACCOUNTS ||--o{ SCHEDULED_WORKOUTS : plans
+    USER_ACCOUNTS ||--o{ ACHIEVEMENTS : earns
+    USER_ACCOUNTS ||--o{ RECOMMENDATION_EVENTS : receives
+    USER_ACCOUNTS ||--o{ CHAT_SESSIONS : starts
+    USER_ACCOUNTS ||--o{ CHAT_MESSAGES : writes
+    USER_ACCOUNTS ||--o{ CHAT_TOOL_ACTIONS : approves
+    WORKOUT_TEMPLATES ||--o{ SCHEDULED_WORKOUTS : schedules
+    CHAT_SESSIONS ||--o{ CHAT_MESSAGES : contains
+    CHAT_SESSIONS ||--o{ CHAT_TOOL_ACTIONS : suggests
+    EXERCISE_LIBRARY ||--o{ EXERCISE_MEDIA_GALLERY : has

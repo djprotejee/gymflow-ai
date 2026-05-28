@@ -1,0 +1,56 @@
+{
+  "model_version": "progression_v3_supervised_next_set",
+  "dataset": {
+    "user_id": "demo",
+    "workout_sets": 638,
+    "cases": 585,
+    "train_cases": 438,
+    "test_cases": 147,
+    "split": "chronological_75_25"
+  },
+  "selected_model": "hybrid_ridge_weight_policy_reps",
+  "weight_model": "ridge",
+  "reps_model": null,
+  "reps_source": "policy_guardrail",
+  "selection_score": 7.044,
+  "artifact": "ml\\models\\artifacts\\progression_next_set_model.joblib",
+  "prediction_sample": "ml\\reports\\progression_supervised_predictions.csv",
+  "metrics": {
+    "policy_baseline": {
+      "weight_mae_kg": 6.999,
+      "weight_rmse_kg": 14.247,
+      "reps_mae": 0.891,
+      "reps_rmse": 1.505,
+      "rep_range_hit_rate": 0.735
+    },
+    "ridge": {
+      "weight_mae_kg": 5.997,
+      "weight_rmse_kg": 13.752,
+      "reps_mae": 3.66,
+      "reps_rmse": 6.104,
+      "rep_range_hit_rate": 0.571
+    },
+    "random_forest": {
+      "weight_mae_kg": 6.272,
+      "weight_rmse_kg": 14.196,
+      "reps_mae": 1.065,
+      "reps_rmse": 1.304,
+      "rep_range_hit_rate": 0.721
+    },
+    "extra_trees": {
+      "weight_mae_kg": 6.175,
+      "weight_rmse_kg": 12.738,
+      "reps_mae": 1.034,
+      "reps_rmse": 1.289,
+      "rep_range_hit_rate": 0.694
+    },
+    "hybrid_ridge_weight_policy_reps": {
+      "weight_mae_kg": 5.997,
+      "weight_rmse_kg": 13.752,
+      "reps_mae": 0.891,
+      "reps_rmse": 1.505,
+      "rep_range_hit_rate": 0.735
+    }
+  },
+  "note": "Supervised next-set regression trained on deterministic demo workout history. Use as a thesis/product artifact, not a clinical prescription."
+}

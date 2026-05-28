@@ -1,0 +1,9 @@
+{
+  "model": "hist_gradient_boosting",
+  "rows": 8064,
+  "gyms": 16,
+  "min_timestamp": "2026-05-27 23:20:00",
+  "max_timestamp": "2026-06-03 23:00:00",
+  "horizon_days": 7,
+  "interval_minutes": 20
+}

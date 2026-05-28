@@ -1,0 +1,66 @@
+erDiagram
+    direction TB
+
+    USER_ACCOUNTS {
+        string user_id PK
+        string email
+        string display_name
+        string role
+    }
+
+    EXERCISE_LIBRARY {
+        string slug PK
+        string name
+        string category
+        string muscle_group
+        string difficulty
+        string source_url
+    }
+
+    EXERCISE_MEDIA_GALLERY {
+        int id PK
+        string exercise_slug FK
+        string media_type
+        string media_url
+        string source_license
+    }
+
+    ACHIEVEMENTS {
+        int id PK
+        string user_id FK
+        string code
+        string title
+        float progress
+        float target
+    }
+
+    PROMOTIONS {
+        int id PK
+        string gym_id
+        string title
+        string starts_at
+        int discount_percent
+        string status
+    }
+
+    WORKOUT_SETS {
+        int id PK
+        string user_id FK
+        string exercise
+        float weight_kg
+        int reps
+    }
+
+    SCHEDULED_WORKOUTS {
+        int id PK
+        string user_id FK
+        string gym_id
+        int template_id FK
+        string scheduled_at
+        float expected_people
+    }
+
+    USER_ACCOUNTS ||--o{ ACHIEVEMENTS : earns
+    EXERCISE_LIBRARY ||--o{ EXERCISE_MEDIA_GALLERY : has
+    EXERCISE_LIBRARY ||--o{ WORKOUT_SETS : used_in
+    PROMOTIONS ||--o{ SCHEDULED_WORKOUTS : targets

@@ -1,0 +1,10 @@
+feature_group,model,train_rows,test_rows,mae,rmse,wape
+calendar_lag,hist_gradient_boosting,13269,3328,6.3751,9.4323,0.1452
+calendar_holiday_lag,hist_gradient_boosting,13269,3328,6.5747,9.789,0.1498
+all_features,hist_gradient_boosting,13269,3328,6.5896,9.7668,0.1501
+lag_rolling,hist_gradient_boosting,13269,3328,7.7067,11.6886,0.1756
+lag_only,hist_gradient_boosting,13269,3328,7.7534,11.7877,0.1766
+calendar_rolling,hist_gradient_boosting,13269,3328,8.3731,11.6775,0.1908
+calendar_only,hist_gradient_boosting,13269,3328,10.1653,14.1,0.2316
+calendar_holiday,hist_gradient_boosting,13269,3328,10.3694,14.2421,0.2362
+rolling_only,hist_gradient_boosting,13269,3328,12.4207,17.9005,0.283

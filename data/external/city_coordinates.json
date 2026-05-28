@@ -1,0 +1,82 @@
+{
+  "Івано-Франківськ": {
+    "name": "Івано-Франківськ",
+    "admin1": "Івано-Франківська область",
+    "country_code": "UA",
+    "latitude": 48.92312,
+    "longitude": 24.71248,
+    "source": "Open-Meteo Geocoding API"
+  },
+  "Бориспіль": {
+    "name": "Бориспіль",
+    "admin1": "Київська область",
+    "country_code": "UA",
+    "latitude": 50.35269,
+    "longitude": 30.95501,
+    "source": "Open-Meteo Geocoding API"
+  },
+  "Бровари": {
+    "name": "Бровари",
+    "admin1": "Київська область",
+    "country_code": "UA",
+    "latitude": 50.51809,
+    "longitude": 30.80671,
+    "source": "Open-Meteo Geocoding API"
+  },
+  "Вінниця": {
+    "name": "Вінниця",
+    "admin1": "Вінницька область",
+    "country_code": "UA",
+    "latitude": 49.2322,
+    "longitude": 28.46871,
+    "source": "Open-Meteo Geocoding API"
+  },
+  "Житомир": {
+    "name": "Житомир",
+    "admin1": "Житомирська Область",
+    "country_code": "UA",
+    "latitude": 50.26235,
+    "longitude": 28.67913,
+    "source": "Open-Meteo Geocoding API"
+  },
+  "Київ": {
+    "name": "Київ",
+    "admin1": "Місто Київ",
+    "country_code": "UA",
+    "latitude": 50.45466,
+    "longitude": 30.5238,
+    "source": "Open-Meteo Geocoding API"
+  },
+  "Львів": {
+    "name": "Львів",
+    "admin1": "Львівська Область",
+    "country_code": "UA",
+    "latitude": 49.83826,
+    "longitude": 24.02324,
+    "source": "Open-Meteo Geocoding API"
+  },
+  "Рівне": {
+    "name": "Рівне",
+    "admin1": "Рівненська Область",
+    "country_code": "UA",
+    "latitude": 50.62036,
+    "longitude": 26.23695,
+    "source": "Open-Meteo Geocoding API"
+  },
+  "Хмельницький": {
+    "name": "Хмельницький",
+    "admin1": "Хмельницька область",
+    "country_code": "UA",
+    "latitude": 49.41835,
+    "longitude": 26.97936,
+    "source": "Open-Meteo Geocoding API"
+  },
+  "Черкаси": {
+    "name": "Черкаси",
+    "admin1": "Черкаська область",
+    "country_code": "UA",
+    "latitude": 49.44452,
+    "longitude": 32.05738,
+    "source": "Open-Meteo Geocoding API"
+  }
+}

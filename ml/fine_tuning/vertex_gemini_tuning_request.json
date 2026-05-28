@@ -1,0 +1,8 @@
+{
+  "baseModel": "gemini-2.5-flash",
+  "supervisedTuningSpec": {
+    "trainingDatasetUri": "gs://gymflow-ai-tuning-a1/gymflow/vertex_gemini_coach_behavior_train.jsonl",
+    "validationDatasetUri": "gs://gymflow-ai-tuning-a1/gymflow/vertex_gemini_coach_behavior_eval.jsonl"
+  },
+  "tunedModelDisplayName": "gymflow-coach-behavior-tuning-v2"
+}

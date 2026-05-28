@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "real_only_train_real_holdout",
+    "model": "hist_gradient_boosting",
+    "train_rows": 13269,
+    "synthetic_train_rows": 0,
+    "test_rows": 3328,
+    "mae": 6.5896,
+    "rmse": 9.7668,
+    "wape": 0.1501
+  },
+  {
+    "experiment": "real_plus_synthetic_train_real_holdout",
+    "model": "hist_gradient_boosting",
+    "train_rows": 53061,
+    "synthetic_train_rows": 39792,
+    "test_rows": 3328,
+    "mae": 7.7724,
+    "rmse": 12.178,
+    "wape": 0.1771
+  }
+]

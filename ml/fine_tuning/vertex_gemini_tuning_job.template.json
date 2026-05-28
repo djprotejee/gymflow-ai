@@ -1,0 +1,15 @@
+{
+  "status": "template_only",
+  "project_id": "gymflow-ai-497521",
+  "region": "us-central1",
+  "base_model": "gemini-2.5-flash",
+  "training_data_uri": "gs://gymflow-ai-tuning-a1/gymflow/vertex_gemini_coach_behavior_train.jsonl",
+  "validation_data_uri": "gs://gymflow-ai-tuning-a1/gymflow/vertex_gemini_coach_behavior_eval.jsonl",
+  "display_name": "gymflow-coach-behavior-tuning",
+  "notes": [
+    "This file does not launch a Vertex AI job.",
+    "Upload reviewed Vertex Gemini JSONL files to Cloud Storage before tuning.",
+    "Run make finetune-eval before upload.",
+    "Keep RAG enabled after tuning; tuning changes behavior, not the factual knowledge base."
+  ]
+}

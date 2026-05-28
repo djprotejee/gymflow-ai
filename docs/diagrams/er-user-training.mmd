@@ -1,0 +1,75 @@
+erDiagram
+    direction TB
+
+    USER_ACCOUNTS {
+        string user_id PK
+        string email
+        string display_name
+        string role
+    }
+
+    USER_PREFERENCES {
+        string user_id PK, FK
+        int preferred_min_hour
+        int preferred_max_hour
+        float max_crowd_people
+        int weekly_goal_sessions
+        string preferred_gym_id
+        string preferred_rep_mode
+    }
+
+    USER_SESSIONS {
+        int id PK
+        string user_id FK
+        string token_hash
+        string role
+        string created_at
+        string expires_at
+        string revoked_at
+    }
+
+    VISITS {
+        int id PK
+        string user_id FK
+        string gym_id
+        string checked_in_at
+        float active_people_at_checkin
+    }
+
+    WORKOUT_SETS {
+        int id PK
+        string user_id FK
+        string exercise
+        float weight_kg
+        int reps
+        int set_index
+        string performed_at
+    }
+
+    WORKOUT_TEMPLATES {
+        int id PK
+        string user_id FK
+        string name
+        string focus
+        string exercises_json
+        int estimated_minutes
+    }
+
+    SCHEDULED_WORKOUTS {
+        int id PK
+        string user_id FK
+        string gym_id
+        int template_id FK
+        string title
+        string scheduled_at
+        float expected_people
+        string status
+    }
+
+    USER_ACCOUNTS ||--|| USER_PREFERENCES : has
+    USER_ACCOUNTS ||--o{ USER_SESSIONS : opens
+    USER_ACCOUNTS ||--o{ VISITS : logs
+    USER_ACCOUNTS ||--o{ WORKOUT_SETS : records
+    USER_ACCOUNTS ||--o{ WORKOUT_TEMPLATES : owns
+    USER_ACCOUNTS ||--o{ SCHEDULED_WORKOUTS : plans
+    WORKOUT_TEMPLATES ||--o{ SCHEDULED_WORKOUTS : schedules

@@ -1,0 +1,22 @@
+[
+  {
+    "feature_set": "base_with_weather",
+    "model": "hist_gradient_boosting",
+    "train_rows": 13269,
+    "test_rows": 3328,
+    "matched_weather_rows": 16597,
+    "mae": 6.5723,
+    "rmse": 9.7546,
+    "wape": 0.1497
+  },
+  {
+    "feature_set": "base_without_weather",
+    "model": "hist_gradient_boosting",
+    "train_rows": 13269,
+    "test_rows": 3328,
+    "matched_weather_rows": 16597,
+    "mae": 6.5896,
+    "rmse": 9.7668,
+    "wape": 0.1501
+  }
+]

@@ -1,0 +1,16 @@
+flowchart LR
+    features["occupancy_features.csv"] --> split["Per-gym time-respecting split"]
+    split --> baseline["Baselines and tabular ML"]
+    split --> ablation["Feature ablation"]
+    split --> deep["MLP, LSTM, GRU, Transformer"]
+    split --> sarimax["ARIMA/SARIMAX branch"]
+    split --> synthetic["Real-only vs real+synthetic diagnostic"]
+    split --> weather["Weather/no-weather ablation"]
+    baseline --> registry["Unified experiment registry"]
+    ablation --> registry
+    deep --> registry
+    sarimax --> registry
+    synthetic --> registry
+    weather --> registry
+    registry --> selection["Production model selection"]
+    selection --> forecast["Seven-day future forecast generation"]

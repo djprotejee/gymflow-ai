@@ -1,0 +1,67 @@
+{
+  "status": "preview",
+  "source_name": "Local import fixture",
+  "source_license": "Internal test fixture only",
+  "records": [
+    {
+      "slug": "fixture-sled-push",
+      "name": "Fixture Sled Push",
+      "category": "Conditioning",
+      "muscle_group": "Legs",
+      "difficulty": "Unverified",
+      "equipment": "Sled",
+      "media_type": "external_image",
+      "media_url": "https://example.invalid/sled-push.gif",
+      "youtube_video_id": "",
+      "source_name": "Local import fixture",
+      "source_url": "https://example.invalid/sled-push",
+      "source_license": "Internal test fixture only",
+      "attribution": "Local dry-run fixture for importer verification.",
+      "checked_at": "2026-05-24",
+      "primary_muscles": [
+        "quads-left",
+        "quads-right",
+        "glutes-left",
+        "glutes-right"
+      ],
+      "secondary_muscles": [
+        "hamstrings-left",
+        "hamstrings-right",
+        "calves-left",
+        "calves-right"
+      ],
+      "instructions": [
+        "Brace torso and drive through the floor.",
+        "Keep arms long and hips low while pushing."
+      ],
+      "cues": [
+        "Drive knees forward",
+        "Stay braced"
+      ],
+      "mistakes": [
+        "Rounding the back"
+      ],
+      "video_url": "https://example.invalid/sled-push",
+      "image_hint": "external-import-preview",
+      "media_gallery": [
+        {
+          "media_type": "external_image",
+          "media_url": "https://example.invalid/sled-push.gif",
+          "thumbnail_url": "https://example.invalid/sled-push-thumb.jpg",
+          "title": "Fixture Sled Push external media",
+          "source_name": "Local import fixture",
+          "source_url": "https://example.invalid/sled-push",
+          "source_license": "Internal test fixture only",
+          "attribution": "Local dry-run fixture for importer verification.",
+          "checked_at": "2026-05-24",
+          "embed_allowed": false,
+          "download_allowed": false,
+          "requires_attribution": true,
+          "sort_order": 0,
+          "license_notes": "Dry-run fixture only."
+        }
+      ]
+    }
+  ],
+  "note": "Dry-run fixture used to verify the importer workflow without touching reviewed external content."
+}

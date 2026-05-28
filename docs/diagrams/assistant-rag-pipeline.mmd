@@ -1,0 +1,11 @@
+flowchart LR
+    user["User query"] --> api["/chat or /chat/local"]
+    api --> forecast["Forecast slots and training plan context"]
+    api --> history["Workout history and progression context"]
+    api --> retrieval["Exercise retrieval service"]
+    retrieval --> library["Approved exercise library records"]
+    forecast --> rag["Context assembly"]
+    history --> rag
+    library --> rag
+    rag --> provider["Gemini provider or deterministic fallback"]
+    provider --> answer["Coach answer with sources"]

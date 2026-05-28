@@ -1,0 +1,5 @@
+model,rows,mae,rmse,wape
+previous_observation,3328,8.3206,13.5099,0.1896
+calendar_profile_gym_weekday_hour,3328,10.4203,14.4284,0.2374
+rolling_mean_16,3328,20.0996,27.6906,0.4579
+seasonal_lag_1d,3328,24.9534,34.7194,0.5685

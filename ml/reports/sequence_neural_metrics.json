@@ -1,0 +1,12 @@
+[
+  {
+    "model": "mlp_sequence_regressor",
+    "scope": "all_gyms_pooled_flattened_sequence",
+    "sequence_window": 12,
+    "train_rows": 13119,
+    "test_rows": 3286,
+    "mae": 8.035,
+    "rmse": 11.7279,
+    "wape": 0.1843
+  }
+]

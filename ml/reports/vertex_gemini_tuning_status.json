@@ -1,0 +1,237 @@
+{
+  "action": "get",
+  "checked_at": "2026-05-26T22:35:34.482501+00:00",
+  "project": "gymflow-ai-497521",
+  "region": "us-central1",
+  "job_name": "projects/1029322077032/locations/us-central1/tuningJobs/4324141445473632256",
+  "result": {
+    "name": "projects/1029322077032/locations/us-central1/tuningJobs/4324141445473632256",
+    "tunedModelDisplayName": "gymflow-coach-behavior-tuning-v2",
+    "baseModel": "gemini-2.5-flash",
+    "supervisedTuningSpec": {
+      "trainingDatasetUri": "gs://gymflow-ai-tuning-a1/gymflow/vertex_gemini_coach_behavior_train.jsonl",
+      "validationDatasetUri": "gs://gymflow-ai-tuning-a1/gymflow/vertex_gemini_coach_behavior_eval.jsonl",
+      "hyperParameters": {
+        "epochCount": "39",
+        "learningRateMultiplier": 5,
+        "adapterSize": "ADAPTER_SIZE_FOUR"
+      }
+    },
+    "state": "JOB_STATE_SUCCEEDED",
+    "createTime": "2026-05-26T21:50:53.821597Z",
+    "startTime": "2026-05-26T21:50:53.868680Z",
+    "endTime": "2026-05-26T22:28:20.860113Z",
+    "updateTime": "2026-05-26T22:28:20.860113Z",
+    "experiment": "projects/1029322077032/locations/us-central1/metadataStores/default/contexts/tuning-experiment-20260526145521181795",
+    "tunedModel": {
+      "model": "projects/1029322077032/locations/us-central1/models/4009681961743286272@1",
+      "endpoint": "projects/1029322077032/locations/us-central1/endpoints/6122406748654403584",
+      "checkpoints": [
+        {
+          "checkpointId": "1",
+          "epoch": "4",
+          "step": "21",
+          "endpoint": "projects/1029322077032/locations/us-central1/endpoints/2557807643590656000"
+        },
+        {
+          "checkpointId": "2",
+          "epoch": "8",
+          "step": "42",
+          "endpoint": "projects/1029322077032/locations/us-central1/endpoints/2260992280649269248"
+        },
+        {
+          "checkpointId": "3",
+          "epoch": "12",
+          "step": "63",
+          "endpoint": "projects/1029322077032/locations/us-central1/endpoints/4859147053176979456"
+        },
+        {
+          "checkpointId": "4",
+          "epoch": "16",
+          "step": "84",
+          "endpoint": "projects/1029322077032/locations/us-central1/endpoints/2566814842845396992"
+        },
+        {
+          "checkpointId": "5",
+          "epoch": "20",
+          "step": "105",
+          "endpoint": "projects/1029322077032/locations/us-central1/endpoints/8592631144267120640"
+        },
+        {
+          "checkpointId": "6",
+          "epoch": "24",
+          "step": "126",
+          "endpoint": "projects/1029322077032/locations/us-central1/endpoints/3549021774077231104"
+        },
+        {
+          "checkpointId": "7",
+          "epoch": "28",
+          "step": "147",
+          "endpoint": "projects/1029322077032/locations/us-central1/endpoints/5098260045892681728"
+        },
+        {
+          "checkpointId": "8",
+          "epoch": "32",
+          "step": "168",
+          "endpoint": "projects/1029322077032/locations/us-central1/endpoints/2553304043963285504"
+        },
+        {
+          "checkpointId": "9",
+          "epoch": "36",
+          "step": "189",
+          "endpoint": "projects/1029322077032/locations/us-central1/endpoints/1139595973434015744"
+        },
+        {
+          "checkpointId": "10",
+          "epoch": "39",
+          "step": "206",
+          "endpoint": "projects/1029322077032/locations/us-central1/endpoints/6122406748654403584"
+        }
+      ]
+    },
+    "tuningDataStats": {
+      "supervisedTuningDataStats": {
+        "tuningDatasetExampleCount": "278",
+        "userInputTokenDistribution": {
+          "sum": "13943",
+          "min": 50,
+          "max": 53,
+          "mean": 50.15467625899281,
+          "median": 50,
+          "p5": 50,
+          "p95": 51,
+          "buckets": [
+            {
+              "count": 252,
+              "left": 50,
+              "right": 50
+            },
+            {
+              "count": 15,
+              "left": 51,
+              "right": 51
+            },
+            {
+              "count": 5,
+              "left": 52,
+              "right": 52
+            },
+            {
+              "count": 6,
+              "left": 53,
+              "right": 53
+            }
+          ]
+        },
+        "userOutputTokenDistribution": {
+          "sum": "24333",
+          "min": 36,
+          "max": 188,
+          "mean": 87.52877697841727,
+          "median": 82,
+          "p5": 42,
+          "p95": 152,
+          "buckets": [
+            {
+              "count": 97,
+              "left": 36,
+              "right": 61
+            },
+            {
+              "count": 57,
+              "left": 62,
+              "right": 86
+            },
+            {
+              "count": 60,
+              "left": 87,
+              "right": 112
+            },
+            {
+              "count": 34,
+              "left": 113,
+              "right": 137
+            },
+            {
+              "count": 21,
+              "left": 138,
+              "right": 163
+            },
+            {
+              "count": 9,
+              "left": 164,
+              "right": 188
+            }
+          ]
+        },
+        "userMessagePerExampleDistribution": {
+          "sum": "556",
+          "min": 2,
+          "max": 2,
+          "mean": 2,
+          "median": 2,
+          "p5": 2,
+          "p95": 2,
+          "buckets": [
+            {
+              "count": 278,
+              "left": 2,
+              "right": 2
+            }
+          ]
+        },
+        "userDatasetExamples": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "text": "Suggest one hypertrophy exercise for arms at beginner level."
+              }
+            ]
+          },
+          {
+            "role": "model",
+            "parts": [
+              {
+                "text": "Recommended exercise: Alternate Hammer Curl. Primary target: biceps-left, biceps-right, forearm-left, forearm-right. Secondary target: none. Difficulty: Beginner. Coaching cue: Controlled reps. Technique source: yuhonas/free-exercise-db. First step: Stand up with your torso upright and a dumbbell in each hand being held at arms length. The elbows should be close to the torso."
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "parts": [
+              {
+                "text": "Suggest one hypertrophy exercise for arms at beginner level."
+              }
+            ]
+          },
+          {
+            "role": "model",
+            "parts": [
+              {
+                "text": "Recommended exercise: Alternate Incline Dumbbell Curl. Primary target: biceps-left, biceps-right. Secondary target: none. Difficulty: Beginner. Coaching cue: Controlled reps. Technique source: yuhonas/free-exercise-db. First step: Sit down on an incline bench with a dumbbell in each hand being held at arms length. Tip: Keep the elbows close to the torso.This will be your starting position."
+              }
+            ]
+          },
+          {
+            "role": "user",
+            "parts": [
+              {
+                "text": "Suggest one hypertrophy exercise for arms at beginner level."
+              }
+            ]
+          },
+          {
+            "role": "model",
+            "parts": [
+              {
+                "text": "Recommended exercise: Band Skull Crusher. Primary target: triceps-long-left, triceps-long-right, triceps-lateral-left, triceps-lateral-right. Secondary target: none. Difficulty: Beginner. Coaching cue: Controlled reps. Technique source: yuhonas/free-exercise-db. First step: Secure a band to the base of a rack or the bench. Lay on the bench so that the band is lined up with your head."
+              }
+            ]
+          }
+        ],
+        "totalBillableTokenCount": "38276"
+      }
+    }
+  }
+}

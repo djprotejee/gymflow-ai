@@ -1,0 +1,2 @@
+model,scope,sequence_window,train_rows,test_rows,mae,rmse,wape
+mlp_sequence_regressor,all_gyms_pooled_flattened_sequence,12,13119,3286,8.035,11.7279,0.1843

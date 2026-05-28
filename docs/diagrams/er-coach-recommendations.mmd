@@ -1,0 +1,51 @@
+erDiagram
+    direction TB
+
+    USER_ACCOUNTS {
+        string user_id PK
+        string email
+        string display_name
+        string role
+    }
+
+    RECOMMENDATION_EVENTS {
+        int id PK
+        string user_id FK
+        string recommendation_type
+        string context_key
+        string status
+        float score
+        float expected_people
+    }
+
+    CHAT_SESSIONS {
+        string id PK
+        string user_id FK
+        string title
+        int pinned
+    }
+
+    CHAT_MESSAGES {
+        int id PK
+        string session_id FK
+        string user_id FK
+        string role
+        string text
+        string citations_json
+    }
+
+    CHAT_TOOL_ACTIONS {
+        int id PK
+        string session_id FK
+        string user_id FK
+        string action_type
+        string status
+        string payload_json
+    }
+
+    USER_ACCOUNTS ||--o{ RECOMMENDATION_EVENTS : receives
+    USER_ACCOUNTS ||--o{ CHAT_SESSIONS : starts
+    USER_ACCOUNTS ||--o{ CHAT_MESSAGES : writes
+    USER_ACCOUNTS ||--o{ CHAT_TOOL_ACTIONS : approves
+    CHAT_SESSIONS ||--o{ CHAT_MESSAGES : contains
+    CHAT_SESSIONS ||--o{ CHAT_TOOL_ACTIONS : suggests

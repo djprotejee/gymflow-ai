@@ -1,0 +1,34 @@
+flowchart TB
+    web["React/Vite web client"]
+
+    subgraph backend["Backend layer"]
+        api["FastAPI application"]
+        rag["RAG and AI Coach services"]
+        progression["Next-set progression service"]
+        forecasting["Occupancy forecasting service"]
+    end
+
+    subgraph storage["Data and artifacts"]
+        db[("SQLite / PostgreSQL")]
+        models["Serialized ML artifacts"]
+        reports["ML reports and figures"]
+    end
+
+    subgraph research["Research pipeline"]
+        scripts["Data preparation and training scripts"]
+        registry["Model registry"]
+    end
+
+    web --> api
+    api --> rag
+    api --> progression
+    api --> forecasting
+    api --> db
+    forecasting --> models
+    progression --> models
+    rag --> db
+
+    scripts --> registry
+    scripts --> db
+    scripts --> models
+    registry --> reports

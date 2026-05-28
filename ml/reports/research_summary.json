@@ -1,0 +1,96 @@
+{
+  "best_tabular_model": {
+    "model": "hist_gradient_boosting",
+    "scope": "all_gyms_pooled",
+    "train_rows": "13269",
+    "test_rows": "3328",
+    "mae": "6.5723",
+    "rmse": "9.7546",
+    "wape": "0.1497"
+  },
+  "best_deep_model": {
+    "model": "transformer_sequence_torch",
+    "scope": "all_gyms_pooled_sequence",
+    "sequence_window": "12",
+    "train_rows": "11476",
+    "validation_rows": "1643",
+    "test_rows": "3286",
+    "epochs_trained": "14",
+    "device": "cpu",
+    "mae": "7.5006",
+    "rmse": "11.2579",
+    "wape": "0.172"
+  },
+  "best_feature_ablation": {
+    "feature_group": "calendar_lag",
+    "model": "hist_gradient_boosting",
+    "train_rows": "13269",
+    "test_rows": "3328",
+    "mae": "6.3751",
+    "rmse": "9.4323",
+    "wape": "0.1452"
+  },
+  "best_registry_row": {
+    "family": "training_progression",
+    "model": "hybrid_ridge_weight_policy_reps",
+    "target": "next_set_weight_kg",
+    "scope": "next_set_progression",
+    "dataset_scope": "demo_workout_history",
+    "train_rows": 438,
+    "test_rows": 147,
+    "mae": 5.997,
+    "rmse": 13.752,
+    "wape": NaN,
+    "source_file": "ml\\reports\\progression_supervised_metrics.csv"
+  },
+  "weather_mae_delta": 0.0173,
+  "synthetic_mae_delta": 1.1828,
+  "deep_gap_to_tabular_mae": 0.9283,
+  "scientific_claims": [
+    {
+      "claim": "The current deployed forecasting choice remains the weather-aware HistGradientBoosting model.",
+      "evidence": {
+        "tabular_best_mae": "6.5723",
+        "best_deep_mae": "7.5006",
+        "best_registry_row": {
+          "model": "hybrid_ridge_weight_policy_reps",
+          "family": "training_progression",
+          "mae": 5.997
+        }
+      }
+    },
+    {
+      "claim": "On the current real holdout, the strongest deep sequence model does not outperform the best tabular baseline.",
+      "evidence": {
+        "best_tabular_model": "hist_gradient_boosting",
+        "best_tabular_mae": "6.5723",
+        "best_deep_model": "transformer_sequence_torch",
+        "best_deep_mae": "7.5006",
+        "mae_gap": 0.9283
+      }
+    },
+    {
+      "claim": "Weather features provide only a modest improvement.",
+      "evidence": {
+        "mae_without_weather": "6.5896",
+        "mae_with_weather": "6.5723",
+        "mae_gain": 0.0173
+      }
+    },
+    {
+      "claim": "The current synthetic supplement worsens performance on the real holdout and should be treated as scenario data, not empirical improvement.",
+      "evidence": {
+        "real_only_mae": "6.5896",
+        "real_plus_synthetic_mae": "7.7724",
+        "mae_change": 1.1828
+      }
+    },
+    {
+      "claim": "Calendar plus lag features provide the strongest feature-group signal in the ablation experiment.",
+      "evidence": {
+        "best_feature_group": "calendar_lag",
+        "best_feature_group_mae": "6.3751"
+      }
+    }
+  ]
+}

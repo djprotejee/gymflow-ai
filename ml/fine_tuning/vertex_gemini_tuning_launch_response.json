@@ -1,0 +1,12 @@
+{
+  "name": "projects/1029322077032/locations/us-central1/tuningJobs/4324141445473632256",
+  "tunedModelDisplayName": "gymflow-coach-behavior-tuning-v2",
+  "baseModel": "gemini-2.5-flash",
+  "supervisedTuningSpec": {
+    "trainingDatasetUri": "gs://gymflow-ai-tuning-a1/gymflow/vertex_gemini_coach_behavior_train.jsonl",
+    "validationDatasetUri": "gs://gymflow-ai-tuning-a1/gymflow/vertex_gemini_coach_behavior_eval.jsonl"
+  },
+  "state": "JOB_STATE_PENDING",
+  "createTime": "2026-05-26T21:50:53.821597Z",
+  "updateTime": "2026-05-26T21:50:53.821597Z"
+}

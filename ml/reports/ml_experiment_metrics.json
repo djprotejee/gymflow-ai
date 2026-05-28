@@ -1,0 +1,38 @@
+[
+  {
+    "model": "hist_gradient_boosting",
+    "scope": "all_gyms_pooled",
+    "train_rows": 13269,
+    "test_rows": 3328,
+    "mae": 6.5723,
+    "rmse": 9.7546,
+    "wape": 0.1497
+  },
+  {
+    "model": "random_forest",
+    "scope": "all_gyms_pooled",
+    "train_rows": 13269,
+    "test_rows": 3328,
+    "mae": 7.1203,
+    "rmse": 10.522,
+    "wape": 0.1622
+  },
+  {
+    "model": "ridge_regression",
+    "scope": "all_gyms_pooled",
+    "train_rows": 13269,
+    "test_rows": 3328,
+    "mae": 8.1694,
+    "rmse": 12.5823,
+    "wape": 0.1861
+  },
+  {
+    "model": "arima_2_0_2",
+    "scope": "selected_gym:gym_008",
+    "train_rows": 831,
+    "test_rows": 208,
+    "mae": 28.0387,
+    "rmse": 37.8481,
+    "wape": 0.3878
+  }
+]

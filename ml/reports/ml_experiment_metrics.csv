@@ -1,0 +1,5 @@
+model,scope,train_rows,test_rows,mae,rmse,wape
+hist_gradient_boosting,all_gyms_pooled,13269,3328,6.5723,9.7546,0.1497
+random_forest,all_gyms_pooled,13269,3328,7.1203,10.522,0.1622
+ridge_regression,all_gyms_pooled,13269,3328,8.1694,12.5823,0.1861
+arima_2_0_2,selected_gym:gym_008,831,208,28.0387,37.8481,0.3878

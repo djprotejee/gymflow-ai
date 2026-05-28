@@ -1,0 +1,11 @@
+[
+  {
+    "model": "sarimax_1_0_1_exogenous",
+    "scope": "selected_gym:gym_008",
+    "train_rows": 831,
+    "test_rows": 208,
+    "mae": 11.2694,
+    "rmse": 16.3245,
+    "wape": 0.1559
+  }
+]

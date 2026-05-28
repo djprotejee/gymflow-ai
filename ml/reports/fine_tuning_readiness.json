@@ -1,0 +1,31 @@
+{
+  "status": "dataset_ready_for_review",
+  "train_examples": 278,
+  "eval_examples": 50,
+  "total_examples": 328,
+  "task_counts": {
+    "citation_discipline": 1,
+    "exercise_recommendation": 260,
+    "forecast_aware_recommendation": 5,
+    "progression_explanation": 10,
+    "rag_cited_technique": 40,
+    "safety_refusal": 5,
+    "tool_action_create_template": 1,
+    "tool_action_log_target_set": 1,
+    "tool_action_manager_promotion_draft": 1,
+    "tool_action_reschedule_workout": 1,
+    "tool_action_schedule_week": 1,
+    "tool_action_template_edit": 1,
+    "tool_action_update_preferences": 1
+  },
+  "format": "chat messages JSONL plus Vertex Gemini JSONL",
+  "intended_provider": "Vertex AI Gemini supervised fine-tuning after manual review",
+  "not_executed": "No fine-tuning job is launched by this script.",
+  "quality_gate": "Run make finetune-eval, manually review labels, safety refusals, and provider schema before upload.",
+  "outputs": {
+    "train": "ml\\fine_tuning\\coach_behavior_train.jsonl",
+    "eval": "ml\\fine_tuning\\coach_behavior_eval.jsonl",
+    "vertex_train": "ml\\fine_tuning\\vertex_gemini_coach_behavior_train.jsonl",
+    "vertex_eval": "ml\\fine_tuning\\vertex_gemini_coach_behavior_eval.jsonl"
+  }
+}

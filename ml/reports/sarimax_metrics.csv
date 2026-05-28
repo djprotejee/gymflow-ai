@@ -1,0 +1,2 @@
+model,scope,train_rows,test_rows,mae,rmse,wape
+sarimax_1_0_1_exogenous,selected_gym:gym_008,831,208,11.2694,16.3245,0.1559

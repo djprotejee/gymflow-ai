@@ -1,0 +1,8 @@
+{
+  "cities": 10,
+  "rows": 10320,
+  "min_timestamp": "2026-04-15 00:00",
+  "max_timestamp": "2026-05-26 23:00",
+  "source": "Open-Meteo Historical Weather API, Forecast API, and Geocoding API",
+  "mode": "observation_weather_features"
+}

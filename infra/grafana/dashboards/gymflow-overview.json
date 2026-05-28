@@ -1,0 +1,39 @@
+{
+  "uid": "gymflow-overview",
+  "title": "GymFlow AI Overview",
+  "schemaVersion": 40,
+  "version": 1,
+  "refresh": "15s",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "API Up",
+      "gridPos": {"x": 0, "y": 0, "w": 6, "h": 4},
+      "targets": [{"expr": "gymflow_api_up"}]
+    },
+    {
+      "type": "stat",
+      "title": "Dataset Rows",
+      "gridPos": {"x": 6, "y": 0, "w": 6, "h": 4},
+      "targets": [{"expr": "gymflow_dataset_rows"}]
+    },
+    {
+      "type": "stat",
+      "title": "Tracked Gyms",
+      "gridPos": {"x": 12, "y": 0, "w": 6, "h": 4},
+      "targets": [{"expr": "gymflow_dataset_gyms"}]
+    },
+    {
+      "type": "timeseries",
+      "title": "Model MAE",
+      "gridPos": {"x": 0, "y": 4, "w": 12, "h": 8},
+      "targets": [{"expr": "gymflow_model_mae"}]
+    },
+    {
+      "type": "timeseries",
+      "title": "Model WAPE",
+      "gridPos": {"x": 12, "y": 4, "w": 12, "h": 8},
+      "targets": [{"expr": "gymflow_model_wape"}]
+    }
+  ]
+}

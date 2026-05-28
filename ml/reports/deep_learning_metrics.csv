@@ -1,0 +1,4 @@
+model,scope,sequence_window,train_rows,validation_rows,test_rows,epochs_trained,device,mae,rmse,wape
+transformer_sequence_torch,all_gyms_pooled_sequence,12,11476,1643,3286,14,cpu,7.5006,11.2579,0.172
+gru_sequence_torch,all_gyms_pooled_sequence,12,11476,1643,3286,14,cpu,7.6568,11.3203,0.1756
+lstm_sequence_torch,all_gyms_pooled_sequence,12,11476,1643,3286,8,cpu,8.2176,12.0631,0.1884

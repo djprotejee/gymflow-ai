@@ -1,0 +1,8 @@
+flowchart LR
+    raw["Raw occupancy CSV files"] --> copy["Source resolution and staging"]
+    copy --> normalize["Timestamp correction to 2026\nGym ID normalization\nDeduplication"]
+    normalize --> features["Calendar, holiday, lag,\nrolling-window feature engineering"]
+    features --> observations["occupancy_observations.csv"]
+    features --> matrix["occupancy_features.csv"]
+    observations --> summary["data_summary.json"]
+    matrix --> weatherjoin["Optional weather join in training scripts"]

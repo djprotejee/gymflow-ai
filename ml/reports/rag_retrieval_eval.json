@@ -1,0 +1,389 @@
+{
+  "summary": {
+    "queries": 6,
+    "hit_at_1": 0.8333,
+    "hit_at_3": 1.0,
+    "hit_at_6": 1.0,
+    "mrr": 0.9167,
+    "retrieval_method": "BM25-style lexical retrieval over GymFlow chunks",
+    "note": "This evaluates the current non-vector RAG retrieval layer; it is not a fine-tuned model evaluation."
+  },
+  "rows": [
+    {
+      "query": "bench press technique",
+      "expected_source_type": "exercise_library",
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_6": true,
+      "reciprocal_rank": 1.0,
+      "relevant_rank": 1,
+      "top_hits": [
+        {
+          "chunk_id": "exercise:close-grip-bench-press:technique",
+          "title": "Close Grip Bench Press",
+          "source_type": "exercise_library",
+          "score": 9.873,
+          "matched_terms": [
+            "bench",
+            "press"
+          ]
+        },
+        {
+          "chunk_id": "exercise:barbell-incline-bench-press:technique",
+          "title": "Barbell Incline Bench Press",
+          "source_type": "exercise_library",
+          "score": 9.7789,
+          "matched_terms": [
+            "bench",
+            "press",
+            "technique"
+          ]
+        },
+        {
+          "chunk_id": "exercise:dumbbell-incline-bench-press:technique",
+          "title": "Dumbbell Incline Bench Press",
+          "source_type": "exercise_library",
+          "score": 9.7789,
+          "matched_terms": [
+            "bench",
+            "press",
+            "technique"
+          ]
+        },
+        {
+          "chunk_id": "exercise:dumbbell-bench-press:technique",
+          "title": "Dumbbell Bench Press",
+          "source_type": "exercise_library",
+          "score": 9.7372,
+          "matched_terms": [
+            "bench",
+            "press",
+            "technique"
+          ]
+        },
+        {
+          "chunk_id": "exercise:smith-machine-incline-bench-press:technique",
+          "title": "Smith Machine Incline Bench Press",
+          "source_type": "exercise_library",
+          "score": 9.7372,
+          "matched_terms": [
+            "bench",
+            "press",
+            "technique"
+          ]
+        },
+        {
+          "chunk_id": "exercise:smith-machine-bench-press:technique",
+          "title": "Smith Machine Bench Press",
+          "source_type": "exercise_library",
+          "score": 9.726,
+          "matched_terms": [
+            "bench",
+            "press"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "lat pulldown common mistakes",
+      "expected_source_type": "exercise_library",
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_6": true,
+      "reciprocal_rank": 1.0,
+      "relevant_rank": 1,
+      "top_hits": [
+        {
+          "chunk_id": "exercise:machine-lat-pulldown:technique",
+          "title": "Machine Lat Pulldown",
+          "source_type": "exercise_library",
+          "score": 17.2569,
+          "matched_terms": [
+            "common",
+            "lat",
+            "mistakes",
+            "pulldown"
+          ]
+        },
+        {
+          "chunk_id": "exercise:cable-lat-prayer-pulldown:technique",
+          "title": "Cable Lat Prayer Pulldown",
+          "source_type": "exercise_library",
+          "score": 16.6095,
+          "matched_terms": [
+            "common",
+            "lat",
+            "mistakes",
+            "pulldown"
+          ]
+        },
+        {
+          "chunk_id": "exercise:lat-pulldown:technique",
+          "title": "Lat Pulldown",
+          "source_type": "exercise_library",
+          "score": 16.0649,
+          "matched_terms": [
+            "common",
+            "lat",
+            "mistakes",
+            "pulldown"
+          ]
+        },
+        {
+          "chunk_id": "exercise:full-range-of-motion-lat-pulldown:technique",
+          "title": "Full Range Of Motion Lat Pulldown",
+          "source_type": "exercise_library",
+          "score": 14.5796,
+          "matched_terms": [
+            "common",
+            "lat",
+            "mistakes",
+            "pulldown"
+          ]
+        },
+        {
+          "chunk_id": "exercise:one-arm-lat-pulldown:technique",
+          "title": "One Arm Lat Pulldown",
+          "source_type": "exercise_library",
+          "score": 14.2839,
+          "matched_terms": [
+            "common",
+            "lat",
+            "mistakes",
+            "pulldown"
+          ]
+        },
+        {
+          "chunk_id": "user:demo:template:1",
+          "title": "Upper Strength",
+          "source_type": "workout_template",
+          "score": 11.4293,
+          "matched_terms": [
+            "lat",
+            "pulldown"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "my recent workout progress",
+      "expected_source_type": "workout_history",
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_6": true,
+      "reciprocal_rank": 1.0,
+      "relevant_rank": 1,
+      "top_hits": [
+        {
+          "chunk_id": "user:demo:recent_workouts",
+          "title": "Recent workout history",
+          "source_type": "workout_history",
+          "score": 18.9531,
+          "matched_terms": [
+            "recent",
+            "workout"
+          ]
+        },
+        {
+          "chunk_id": "exercise:treadmill-incline-walk:technique",
+          "title": "Treadmill Incline Walk",
+          "source_type": "exercise_library",
+          "score": 6.9489,
+          "matched_terms": [
+            "progress"
+          ]
+        },
+        {
+          "chunk_id": "exercise:sled-drag-harness:technique",
+          "title": "Sled Drag Harness",
+          "source_type": "exercise_library",
+          "score": 6.5145,
+          "matched_terms": [
+            "progress"
+          ]
+        },
+        {
+          "chunk_id": "exercise:body-tricep-press:technique",
+          "title": "Body Tricep Press",
+          "source_type": "exercise_library",
+          "score": 6.1996,
+          "matched_terms": [
+            "progress"
+          ]
+        },
+        {
+          "chunk_id": "exercise:kettlebell-swing:technique",
+          "title": "Kettlebell Swing",
+          "source_type": "exercise_library",
+          "score": 6.0677,
+          "matched_terms": [
+            "workout"
+          ]
+        },
+        {
+          "chunk_id": "exercise:inverted-rows:technique",
+          "title": "Inverted Rows",
+          "source_type": "exercise_library",
+          "score": 6.0407,
+          "matched_terms": [
+            "workout"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "saved workout template",
+      "expected_source_type": "workout_template",
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "hit_at_6": true,
+      "reciprocal_rank": 0.5,
+      "relevant_rank": 2,
+      "top_hits": [
+        {
+          "chunk_id": "user:demo:recent_workouts",
+          "title": "Recent workout history",
+          "source_type": "workout_history",
+          "score": 13.7459,
+          "matched_terms": [
+            "workout"
+          ]
+        },
+        {
+          "chunk_id": "user:demo:template:2",
+          "title": "Lower Progression",
+          "source_type": "workout_template",
+          "score": 11.5135,
+          "matched_terms": [
+            "template"
+          ]
+        },
+        {
+          "chunk_id": "user:demo:template:1",
+          "title": "Upper Strength",
+          "source_type": "workout_template",
+          "score": 11.3919,
+          "matched_terms": [
+            "template"
+          ]
+        },
+        {
+          "chunk_id": "exercise:kettlebell-swing:technique",
+          "title": "Kettlebell Swing",
+          "source_type": "exercise_library",
+          "score": 6.0677,
+          "matched_terms": [
+            "workout"
+          ]
+        },
+        {
+          "chunk_id": "exercise:inverted-rows:technique",
+          "title": "Inverted Rows",
+          "source_type": "exercise_library",
+          "score": 6.0407,
+          "matched_terms": [
+            "workout"
+          ]
+        },
+        {
+          "chunk_id": "exercise:elliptical:technique",
+          "title": "Elliptical",
+          "source_type": "exercise_library",
+          "score": 5.7591,
+          "matched_terms": [
+            "workout"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "preferred quiet training time",
+      "expected_source_type": "user_preferences",
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_6": true,
+      "reciprocal_rank": 1.0,
+      "relevant_rank": 1,
+      "top_hits": [
+        {
+          "chunk_id": "user:demo:preferences",
+          "title": "Training preferences",
+          "source_type": "user_preferences",
+          "score": 23.1273,
+          "matched_terms": [
+            "preferred",
+            "training"
+          ]
+        },
+        {
+          "chunk_id": "exercise:smith-machine-overhead-press:technique",
+          "title": "Smith Machine Overhead Press",
+          "source_type": "exercise_library",
+          "score": 6.3885,
+          "matched_terms": [
+            "preferred"
+          ]
+        },
+        {
+          "chunk_id": "exercise:calf-press-on-the-leg-press-machine:technique",
+          "title": "Calf Press On The Leg Press Machine",
+          "source_type": "exercise_library",
+          "score": 6.1919,
+          "matched_terms": [
+            "preferred",
+            "time"
+          ]
+        },
+        {
+          "chunk_id": "exercise:machine-chest-press-exercise:technique",
+          "title": "Machine Chest Press Exercise",
+          "source_type": "exercise_library",
+          "score": 5.6269,
+          "matched_terms": [
+            "training"
+          ]
+        },
+        {
+          "chunk_id": "exercise:tate-press:technique",
+          "title": "Tate Press",
+          "source_type": "exercise_library",
+          "score": 5.4933,
+          "matched_terms": [
+            "time",
+            "training"
+          ]
+        },
+        {
+          "chunk_id": "exercise:dumbbell-prone-incline-curl:technique",
+          "title": "Dumbbell Prone Incline Curl",
+          "source_type": "exercise_library",
+          "score": 5.2363,
+          "matched_terms": [
+            "preferred"
+          ]
+        }
+      ]
+    },
+    {
+      "query": "scheduled workouts this week",
+      "expected_source_type": "scheduled_workouts",
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "hit_at_6": true,
+      "reciprocal_rank": 1.0,
+      "relevant_rank": 1,
+      "top_hits": [
+        {
+          "chunk_id": "user:demo:scheduled_workouts",
+          "title": "Scheduled workouts",
+          "source_type": "scheduled_workouts",
+          "score": 24.5089,
+          "matched_terms": [
+            "scheduled",
+            "workouts"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "model": "previous_observation",
+    "rows": 3328,
+    "mae": 8.3206,
+    "rmse": 13.5099,
+    "wape": 0.1896
+  },
+  {
+    "model": "calendar_profile_gym_weekday_hour",
+    "rows": 3328,
+    "mae": 10.4203,
+    "rmse": 14.4284,
+    "wape": 0.2374
+  },
+  {
+    "model": "rolling_mean_16",
+    "rows": 3328,
+    "mae": 20.0996,
+    "rmse": 27.6906,
+    "wape": 0.4579
+  },
+  {
+    "model": "seasonal_lag_1d",
+    "rows": 3328,
+    "mae": 24.9534,
+    "rmse": 34.7194,
+    "wape": 0.5685
+  }
+]

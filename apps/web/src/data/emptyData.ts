@@ -1,0 +1,28 @@
+import type { DashboardData } from "../types";
+
+export const emptyData: DashboardData = {
+  summary: null,
+  gyms: [],
+  metrics: [],
+  forecast: [],
+  futureForecast: [],
+  slots: [],
+  futureSlots: [],
+  progress: null,
+  nextSession: null,
+  coachAnswer: null,
+  preferences: null,
+  gamification: null,
+  visits: [],
+  templates: [],
+  achievements: [],
+  trainingPlan: null,
+  activityDashboard: null,
+  exercises: [],
+  scheduledWorkouts: [],
+  managerOverview: null,
+  managerLocations: [],
+  campaigns: [],
+  promotions: [],
+  notifications: [],
+};

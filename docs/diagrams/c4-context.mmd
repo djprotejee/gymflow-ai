@@ -1,0 +1,11 @@
+flowchart TB
+    member["Member user"]
+    manager["Manager user"]
+    weather["Open-Meteo APIs"]
+    app["GymFlow AI system"]
+    occupancy["Historical gym occupancy data"]
+
+    member -->|"Forecasts, planner, smart notes, coach"| app
+    manager -->|"Manager analytics, promotions"| app
+    occupancy -->|"Raw observations"| app
+    weather -->|"Observed and forecast weather features"| app
