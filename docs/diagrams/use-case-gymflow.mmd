@@ -1,0 +1,73 @@
+flowchart LR
+    user["Користувач<br/>спортсмен / відвідувач"]
+    manager["Менеджер<br/>адміністратор мережі"]
+
+    subgraph system["GymFlow AI"]
+        direction TB
+
+        subgraph member["Сценарії користувача"]
+            home(["Переглянути<br/>головний екран"])
+            forecast(["Переглянути прогноз<br/>завантаженості залу"])
+            slots(["Отримати рекомендований<br/>час тренування"])
+            plan(["Запланувати<br/>тренування"])
+            workout(["Вести журнал<br/>тренування"])
+            nextset(["Отримати next-set<br/>рекомендацію"])
+            coach(["Звернутися<br/>до AI Coach"])
+            answer(["Отримати персоналізовану<br/>відповідь"])
+            sources(["Переглянути<br/>джерела RAG"])
+            action(["Виконати tool action<br/>для плану або підходу"])
+        end
+
+        subgraph manager_area["Сценарії менеджера"]
+            netforecast(["Переглянути прогноз<br/>мережі залів"])
+            compare(["Порівняти<br/>локації"])
+            offpeak(["Переглянути off-peak<br/>можливості"])
+            campaign(["Створити<br/>промо-кампанію"])
+            research(["Переглянути research<br/>та model registry"])
+        end
+
+        subgraph internal["Внутрішні ML/AI компоненти"]
+            forecast_model(["Forecast model"])
+            progression_model(["Progression model"])
+            rag(["RAG retrieval"])
+            registry(["Model registry"])
+        end
+    end
+
+    user --> home
+    user --> forecast
+    user --> slots
+    user --> plan
+    user --> workout
+    user --> nextset
+    user --> coach
+    coach --> answer
+    answer --> sources
+    answer --> action
+
+    manager --> netforecast
+    manager --> compare
+    manager --> offpeak
+    manager --> campaign
+    manager --> research
+
+    forecast -. "include" .-> forecast_model
+    slots -. "include" .-> forecast_model
+    netforecast -. "include" .-> forecast_model
+    compare -. "include" .-> forecast_model
+    offpeak -. "include" .-> forecast_model
+    campaign -. "include" .-> forecast_model
+    nextset -. "include" .-> progression_model
+    workout -. "include" .-> progression_model
+    answer -. "include" .-> rag
+    sources -. "include" .-> rag
+    research -. "include" .-> registry
+
+    classDef actor fill:#fff5e6,stroke:#c56a00,stroke-width:2px,color:#1f2933;
+    classDef usecase fill:#ffffff,stroke:#1f4e79,stroke-width:2px,color:#102a43;
+    classDef ml fill:#ecfff8,stroke:#00866e,stroke-width:2px,color:#102a43;
+    classDef ai fill:#fff7ec,stroke:#c76b00,stroke-width:2px,color:#102a43;
+    class user,manager actor;
+    class home,forecast,slots,plan,workout,nextset,netforecast,compare,offpeak,campaign,research usecase;
+    class forecast_model,progression_model,registry ml;
+    class coach,answer,sources,action,rag ai;
