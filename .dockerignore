@@ -13,6 +13,7 @@ apps/web/dist
 apps/web/.vite
 node_modules
 dist
+.tmp-puppeteer
 
 *.log
 .env
