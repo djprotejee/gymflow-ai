@@ -9,11 +9,16 @@ venv/
 node_modules/
 dist/
 .next/
+apps/web/.vite/
 
 # Local configuration
 .env
 .env.*
 !.env.example
+
+# Generated local runtime state
+.tmp-puppeteer/
+*.log
 
 # OS / editor
 .DS_Store
